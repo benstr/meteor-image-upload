@@ -30,7 +30,6 @@ Template.uploadImage.events({
       if (that.doc) {
         newFile.associatedObjectId = that.doc._id;
       }
-      console.log(newFile); //TODO Ben to remove
       coll.insert(newFile, function (err, fileObj) {
         if (err) {
           console.log("Error: ", err);
